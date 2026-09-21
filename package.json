@@ -1,0 +1,6 @@
+{
+  "name":"spirit404",
+  "private":true,
+  "version":"0.1.0",
+  "dependencies":{"@netlify/functions":"latest"}
+}
