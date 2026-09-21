@@ -1,42 +1,61 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MYSTIC — Read the Pattern</title>
-<meta name="description" content="MYSTIC is a dark personal pattern engine for Human Design, astrology and self-reflection.">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SPIRIT404 — Identity Not Found. Pattern Detected.</title>
+<meta name="description" content="SPIRIT404 is a personal pattern system for Human Design, astrology and reflective self-inquiry.">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap');
-:root{--bg:#0d0d0e;--surface:#121214;--line:#29292d;--gold:#d4af37;--text:#e5e5e7;--muted:#8e8e93;--green:#10b981}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background-image:radial-gradient(#fff .6px,transparent .6px);background-size:5px 5px}
-header{height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;position:relative}
-.logo{font-weight:700;letter-spacing:.22em;font-size:15px}.status{font:11px 'JetBrains Mono';color:var(--green);letter-spacing:.08em}
-main{max-width:1400px;margin:auto;padding:7vw 5vw 5vw}.kicker{font:11px 'JetBrains Mono';color:var(--gold);letter-spacing:.18em;margin-bottom:22px}
-h1{font:clamp(72px,14vw,190px)/.82 'Instrument Serif',serif;font-weight:400;letter-spacing:-.055em;margin:0;max-width:900px}
-h1 em{color:var(--gold)}.intro{max-width:560px;margin:40px 0 55px;font-size:19px;line-height:1.6;color:#bdbdc2}
-.cta{display:inline-flex;gap:18px;align-items:center;border:1px solid var(--gold);padding:15px 21px;color:var(--text);text-decoration:none;font:12px 'JetBrains Mono';letter-spacing:.08em;text-transform:uppercase}.cta span{color:var(--gold)}
-.grid{margin-top:100px;border-top:1px solid var(--line);display:grid;grid-template-columns:1fr 2fr}
-.label{padding:28px 0;font:11px 'JetBrains Mono';color:var(--muted);letter-spacing:.14em}.features{display:grid;grid-template-columns:repeat(2,1fr);border-left:1px solid var(--line)}
-.feature{padding:34px;border-bottom:1px solid var(--line);min-height:180px}.feature:nth-child(odd){border-right:1px solid var(--line)}
-.num{font:11px 'JetBrains Mono';color:var(--gold)}h2{font:30px 'Instrument Serif';font-weight:400;margin:18px 0 10px}.feature p{color:var(--muted);line-height:1.55;margin:0}
-footer{border-top:1px solid var(--line);margin-top:80px;padding:24px 5vw;display:flex;justify-content:space-between;color:var(--muted);font:10px 'JetBrains Mono'}
-@media(max-width:700px){.grid{grid-template-columns:1fr}.features{border-left:0}.feature:nth-child(odd){border-right:0}.intro{font-size:17px}h1{font-size:78px}footer{display:block}footer div+div{margin-top:8px}}
-</style></head>
+:root{--bg:#0b0b0c;--surface:#111113;--surface2:#161619;--line:#28282d;--gold:#d4af37;--text:#e7e7e9;--muted:#85858b;--green:#10b981;--red:#b45a5a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.055;background-image:radial-gradient(#fff .55px,transparent .55px);background-size:4px 4px}
+button,input,select{font:inherit}button{cursor:pointer}
+.top{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 4vw;position:sticky;top:0;background:rgba(11,11,12,.94);backdrop-filter:blur(14px);z-index:10}
+.brand{font:700 14px 'JetBrains Mono';letter-spacing:.2em}.brand b{color:var(--gold)}.live{font:10px 'JetBrains Mono';color:var(--green);letter-spacing:.12em}
+.shell{max-width:1440px;margin:auto;padding:0 4vw}.hero{min-height:calc(100vh - 68px);display:grid;grid-template-columns:1.1fr .9fr;gap:6vw;align-items:center;border-bottom:1px solid var(--line)}
+.kicker,.mono{font:10px 'JetBrains Mono';letter-spacing:.16em;color:var(--gold)}h1{font:clamp(76px,12vw,178px);line-height:.78;letter-spacing:-.065em;font-family:'Instrument Serif';font-weight:400;margin:22px 0 35px}h1 em{font-style:italic;color:var(--gold)}.hero p{max-width:610px;color:#b7b7bd;font-size:19px;line-height:1.55}.actions{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}.btn{background:transparent;border:1px solid var(--gold);color:var(--text);padding:14px 18px;font:11px 'JetBrains Mono';letter-spacing:.08em}.btn.primary{background:var(--gold);color:#0b0b0c}.terminal{border:1px solid var(--line);background:#09090a;padding:25px;box-shadow:20px 20px 0 rgba(212,175,55,.035)}.termhead{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px;font:10px 'JetBrains Mono';color:var(--muted)}.termline{font:12px 'JetBrains Mono';margin:13px 0}.ok{color:var(--green)}.gold{color:var(--gold)}.dim{color:#5e5e64}.cursor{display:inline-block;width:7px;height:13px;background:var(--gold);vertical-align:-2px;animation:blink 1s steps(2,end) infinite}@keyframes blink{50%{opacity:0}}
+.nav{border-bottom:1px solid var(--line);display:flex;gap:0;overflow:auto}.nav button{white-space:nowrap;background:none;border:0;border-right:1px solid var(--line);color:var(--muted);padding:18px 24px;font:10px 'JetBrains Mono';letter-spacing:.12em}.nav button.active,.nav button:hover{color:var(--gold)}
+.section{padding:75px 0;border-bottom:1px solid var(--line)}.sectionhead{display:grid;grid-template-columns:1fr 2fr;gap:4vw;margin-bottom:35px}.sectionhead h2{font:46px 'Instrument Serif';font-weight:400;margin:0}.sectionhead p{max-width:620px;color:var(--muted);line-height:1.6;margin:0}
+.panel{background:var(--surface);border:1px solid var(--line);padding:28px}.formgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.field label{display:block;font:9px 'JetBrains Mono';color:var(--muted);letter-spacing:.12em;margin-bottom:8px}.field input,.field select,.ask input{width:100%;background:#0b0b0d;border:1px solid var(--line);color:var(--text);padding:13px;outline:none}.field input:focus,.field select:focus,.ask input:focus{border-color:var(--gold)}
+.chart{margin-top:22px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.bodygraph{min-height:460px;display:grid;place-items:center;background:#0a0a0b;border:1px solid var(--line);position:relative;overflow:hidden}.bodygraph:before{content:"";position:absolute;width:330px;height:330px;border:1px solid #38383d;border-radius:50%;box-shadow:0 0 0 55px rgba(212,175,55,.018),0 0 0 110px rgba(212,175,55,.012)}.human{position:relative;width:150px;height:330px}.human:before{content:"";position:absolute;left:54px;top:8px;width:42px;height:42px;border:1px solid var(--gold);border-radius:50%}.human:after{content:"";position:absolute;left:37px;top:68px;width:76px;height:230px;border:1px solid #707076;clip-path:polygon(50% 0,90% 22%,75% 100%,25% 100%,10% 22%)}.gate{position:absolute;font:9px 'JetBrains Mono';color:var(--gold)}.g1{top:45px;left:5px}.g2{top:150px;right:0}.g3{bottom:28px;left:0}.g4{bottom:100px;right:4px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.metric{background:var(--surface);padding:22px}.metric span{display:block;font:9px 'JetBrains Mono';color:var(--muted);margin-bottom:10px}.metric strong{font:25px 'Instrument Serif';font-weight:400}.signal{margin-top:20px;border-left:2px solid var(--gold);padding:15px 18px;background:#171512}.signal small{font:9px 'JetBrains Mono';color:var(--gold)}.signal p{margin:8px 0 0;line-height:1.5;color:#c4c4c8}
+.daily{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--line)}.day{background:var(--surface);padding:25px;min-height:210px}.day .num{font:10px 'JetBrains Mono';color:var(--gold)}.day h3{font:27px 'Instrument Serif';font-weight:400;margin:20px 0 10px}.day p{color:var(--muted);line-height:1.5}
+.ask{display:flex;gap:10px}.ask input{flex:1}.answer{margin-top:18px;display:none;border:1px solid var(--line);padding:22px;background:#0e0e10;line-height:1.65;color:#c7c7cc}.answer.show{display:block}.archive{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1px;background:var(--line)}.entry{background:var(--surface);padding:22px}.entry .date{font:9px 'JetBrains Mono';color:var(--gold)}.entry h3{margin:12px 0 6px;font-size:16px}.entry p{color:var(--muted);font-size:13px;line-height:1.5}
+.disclaimer{font:10px 'JetBrains Mono';color:#65656b;line-height:1.7;padding:30px 0}.footer{border-top:1px solid var(--line);padding:25px 4vw;display:flex;justify-content:space-between;color:#66666c;font:9px 'JetBrains Mono';letter-spacing:.08em}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:75px 0}.chart,.sectionhead{grid-template-columns:1fr}.formgrid,.daily{grid-template-columns:1fr}.archive{grid-template-columns:1fr}h1{font-size:90px}.terminal{margin-top:20px}}@media(max-width:520px){h1{font-size:72px}.top{padding:0 5vw}.shell{padding:0 5vw}.nav button{padding:16px}.hero p{font-size:16px}}
+</style>
+</head>
 <body>
-<header><div class="logo">MYSTIC</div><div class="status">● SYSTEM ONLINE</div></header>
-<main>
-<div class="kicker">PERSONAL PATTERN ENGINE / 001</div>
-<h1>READ THE <em>PATTERN.</em></h1>
-<p class="intro">A darker way to explore Human Design, astrology and the stories you keep repeating. Your chart is the starting point. Your patterns are the real data.</p>
-<a class="cta" href="#enter">ENTER THE SYSTEM <span>↗</span></a>
-<section class="grid" id="enter">
-<div class="label">THE ARCHITECTURE</div>
-<div class="features">
-<article class="feature"><div class="num">01 / BODY</div><h2>Your blueprint</h2><p>Turn your birth data into a structured personal map, then explore it without the horoscope-fluff.</p></article>
-<article class="feature"><div class="num">02 / SIGNAL</div><h2>Daily patterns</h2><p>Daily prompts and reflections designed to make the abstract useful in actual life.</p></article>
-<article class="feature"><div class="num">03 / ORACLE</div><h2>Ask deeper</h2><p>An AI guide for interpretation, context and questions. Not a crystal ball. A mirror with memory.</p></article>
-<article class="feature"><div class="num">04 / ARCHIVE</div><h2>Watch yourself</h2><p>Keep a private record of insights, experiments and recurring themes so patterns become visible over time.</p></article>
-</div></section>
-</main>
-<footer><div>MYSTIC / DIGITAL RENAISSANCE</div><div>INTERPRETIVE SYSTEMS FOR SELF-REFLECTION</div></footer>
+<header class="top"><div class="brand">SPIRIT<b>404</b></div><div class="live">● SYSTEM ONLINE / SI-001</div></header>
+<div class="shell">
+<section class="hero">
+<div><div class="kicker">PERSONAL PATTERN SYSTEM / BUILD 001</div><h1>IDENTITY<br><em>NOT FOUND.</em></h1><p>Human Design, astrology and reflective AI rebuilt as a dark personal indexing system. Start with the chart. Follow the patterns. Keep the evidence.</p><div class="actions"><button class="btn primary" onclick="go('body')">INITIALISE PROFILE ↗</button><button class="btn" onclick="go('oracle')">OPEN ORACLE</button></div></div>
+<div class="terminal"><div class="termhead"><span>SPIRIT404://BOOT</span><span>LOCAL SESSION</span></div><div class="termline"><span class="dim">$</span> locate identity</div><div class="termline">identity ........ <span class="gold">UNKNOWN</span></div><div class="termline">pattern ........ <span class="ok">DETECTED</span></div><div class="termline">signal ......... <span class="ok">ACTIVE</span></div><div class="termline">archive ........ <span class="ok">READY</span></div><div class="termline">oracle ......... <span class="gold">STANDBY</span></div><br><div class="termline"><span class="dim">$</span> run self-analysis<span class="cursor"></span></div></div>
+</section>
+<nav class="nav"><button class="active" onclick="go('body')">01 / IDENTITY</button><button onclick="go('daily')">02 / SIGNAL</button><button onclick="go('oracle')">03 / ORACLE</button><button onclick="go('archive')">04 / ARCHIVE</button></nav>
+<section class="section" id="body"><div class="sectionhead"><div><div class="kicker">01 / IDENTITY</div><h2>Build your file.</h2></div><p>Enter birth data to create a local demo profile. This prototype intentionally keeps calculations lightweight. Production chart calculations should use a deterministic ephemeris / Human Design engine rather than an LLM.</p></div>
+<div class="panel"><div class="formgrid">
+<div class="field"><label>SUBJECT NAME</label><input id="name" placeholder="Anonymous"></div>
+<div class="field"><label>DATE OF BIRTH</label><input id="dob" type="date"></div>
+<div class="field"><label>TIME OF BIRTH</label><input id="tob" type="time"></div>
+<div class="field"><label>PLACE OF BIRTH</label><input id="place" placeholder="Cork, Ireland"></div>
+<div class="field"><label>TIMEZONE</label><select id="tz"><option>Asia/Bangkok</option><option>Europe/Dublin</option><option>UTC</option></select></div>
+<div class="field" style="display:flex;align-items:end"><button class="btn primary" style="width:100%" onclick="generate()">GENERATE FILE</button></div>
+</div>
+<div class="chart"><div class="bodygraph"><div class="human"><i class="gate g1">17</i><i class="gate g2">34</i><i class="gate g3">10</i><i class="gate g4">57</i></div><div style="position:absolute;bottom:14px;left:16px;font:9px 'JetBrains Mono';color:#5e5e64">BODYGRAPH / VISUAL PROTOTYPE</div></div>
+<div><div class="metrics"><div class="metric"><span>PROFILE</span><strong id="mprofile">WAITING</strong></div><div class="metric"><span>TYPE</span><strong id="mtype">UNKNOWN</strong></div><div class="metric"><span>AUTHORITY</span><strong id="mauth">UNKNOWN</strong></div><div class="metric"><span>STATUS</span><strong id="mstatus">404</strong></div></div><div class="signal"><small>SYSTEM NOTE</small><p id="note">No identity indexed. Generate a file to initialise this session.</p></div></div></div></div></section>
+<section class="section" id="daily"><div class="sectionhead"><div><div class="kicker">02 / SIGNAL</div><h2>Today's transmission.</h2></div><p>A small reflective prompt, not a prediction. Use it as an experiment, then record what actually happened.</p></div><div class="daily"><article class="day"><div class="num">SIGNAL / 001</div><h3>Notice the reflex.</h3><p>Where did you react before you had enough information? Write the trigger down without judging it.</p></article><article class="day"><div class="num">SIGNAL / 002</div><h3>Change one variable.</h3><p>Take one familiar decision and alter the smallest part. Observe whether the outcome changes.</p></article><article class="day"><div class="num">SIGNAL / 003</div><h3>Archive the evidence.</h3><p>Before the day ends, record one thing your mind predicted and what actually happened.</p></article></div></section>
+<section class="section" id="oracle"><div class="sectionhead"><div><div class="kicker">03 / ORACLE</div><h2>Ask the machine.</h2></div><p>The Oracle turns structured profile data and your own notes into reflective interpretations. It should distinguish framework interpretation from observable evidence.</p></div><div class="panel"><div class="ask"><input id="question" placeholder="Why do I keep repeating the same pattern?"><button class="btn primary" onclick="askOracle()">QUERY</button></div><div class="answer" id="answer"></div></div></section>
+<section class="section" id="archive"><div class="sectionhead"><div><div class="kicker">04 / ARCHIVE</div><h2>Watch the pattern form.</h2></div><p>Keep the useful parts. The archive is where repeated observations become more interesting than one-off readings.</p></div><div class="archive" id="archiveList"><article class="entry"><div class="date">ENTRY / 001</div><h3>System initialised</h3><p>Your first session begins here. Generate a profile and start logging observations.</p></article><article class="entry"><div class="date">STATUS</div><h3>PRIVATE BY DEFAULT</h3><p>Demo data remains in this browser session. Production storage should be opt-in.</p></article><article class="entry"><div class="date">NEXT</div><h3>RUN AN EXPERIMENT</h3><p>Use one daily signal, then compare the prediction with reality.</p></article></div></section>
+<div class="disclaimer">SPIRIT404 presents Human Design and astrology as interpretive frameworks for reflection, not established scientific mechanisms or medical advice. Do not use readings to make high-stakes health, legal or financial decisions.</div>
+</div>
+<footer class="footer"><span>SPIRIT404 / DIGITAL RENAISSANCE</span><span>IDENTITY NOT FOUND. PATTERN DETECTED.</span></footer>
+<script>
+const $=id=>document.getElementById(id);
+function go(id){$(id).scrollIntoView({behavior:'smooth'});document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));const map={body:0,daily:1,oracle:2,archive:3};if(map[id]!=null)document.querySelectorAll('.nav button')[map[id]].classList.add('active')}
+function hash(s){let h=0;for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))>>>0;return h}
+function generate(){const n=$('name').value||'UNKNOWN';const d=$('dob').value||'1990-01-01';const h=hash(n+d);const types=['GENERATOR','MANIFESTING GENERATOR','PROJECTOR','MANIFESTOR','REFLECTOR'];const auth=['SACRAL','EMOTIONAL','SPLENIC','SELF-PROJECTED'];$('mprofile').textContent=(h%6+1)+' / '+((h>>4)%6+1);$('mtype').textContent=types[h%types.length];$('mauth').textContent=auth[(h>>3)%auth.length];$('mstatus').textContent='INDEXED';$('note').textContent='File generated for '+n+'. Treat this as an interpretive map. Test it against lived experience, then keep what survives contact with reality.');localStorage.setItem('spirit404.profile',JSON.stringify({n,d,place:$('place').value,t:Date.now()}))}
+async function askOracle(){const q=$('question').value.trim();if(!q)return;const a=$('answer');a.classList.add('show');a.textContent='QUERYING LOCAL ORACLE...';try{const r=await fetch('/api/oracle',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({question:q,profile:localStorage.getItem('spirit404.profile')})});if(r.ok){const j=await r.json();a.textContent=j.answer||'No signal returned.';return}}catch(e){}a.textContent='Start with the observable layer. What happened, what did you expect to happen, and what part of the story did you add afterwards? SPIRIT404 can use symbolic frameworks as prompts, but the useful signal is what you can test in your own life.'}
+(function(){const p=localStorage.getItem('spirit404.profile');if(p){try{$('name').value=JSON.parse(p).n||'';$('place').value=JSON.parse(p).place||''}catch(e){}}})();
+</script>
 </body></html>
