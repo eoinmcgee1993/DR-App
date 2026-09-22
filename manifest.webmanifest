@@ -1,0 +1,9 @@
+{
+  "name":"SPIRIT404",
+  "short_name":"SPIRIT404",
+  "start_url":"/",
+  "display":"standalone",
+  "background_color":"#0b0b0c",
+  "theme_color":"#0b0b0c",
+  "description":"Identity not found. Pattern detected."
+}
