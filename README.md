@@ -1,11 +1,20 @@
-<div align="center">
+# SPIRIT404
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A dark personal pattern system for reflective exploration of Human Design, astrology and recurring personal patterns.
 
-  <h1>Built with AI Studio</h2>
+## MVP
+- Identity profile
+- Visual bodygraph prototype
+- Daily signals
+- Oracle interface
+- Local session state
+- Netlify serverless Oracle endpoint
+- Optional Hugging Face Qwen integration
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Oracle setup
+Set HF_TOKEN as a Netlify environment variable. Without it, the app uses a safe local fallback response.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+The frontend deliberately does not ask an LLM to calculate a Human Design chart. Production chart generation should use a deterministic chart/ephemeris engine, then pass structured results to the Oracle.
 
-</div>
+## Deploy
+The project is static-first and configured for Netlify.
