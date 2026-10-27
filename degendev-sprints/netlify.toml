@@ -1,0 +1,5 @@
+[build]
+  publish = "degendev-sprints"
+
+[build.processing]
+  skip_processing = false
