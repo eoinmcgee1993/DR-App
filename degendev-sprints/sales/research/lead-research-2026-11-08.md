@@ -91,28 +91,26 @@ Research objective: identify founder-led SaaS, digital-product, membership and a
 
 ---
 
-## 4. Tico — 7.2/10
+## 6. Shirt Société — 7.5/10
 
-**Observed pain:** Open issue #3022 reports that when a stylesheet or script fails to load, the page can show “Out of credit” and a plan-lock notice even though authenticated production checks showed positive credit and access=open. Blocking assets in Chromium and WebKit reproduces the misleading UI. This is a billing-state presentation/access-trust problem, not evidence of a failed payment or incorrect entitlement record.
+**Observed pain:** Open issue #85 asks for four Mollie webhook hardening checks: return 500 on transient errors so Mollie retries, escape customer fields in email HTML, compare the provider amount with the order total, and use a conditional pending-to-paid update to prevent duplicate processing. The issue says Netlify currently deploys from a different repository, Shirtsociete2, and that approval from Yesse is needed before changing the deployment source.
 
-**Current work:** Matching PR #3023 is already open and addresses the loading-recovery state and hiding unconfirmed payment notices. Do not pitch the same fix as untouched work.
+**Important code-state caveat:** The current public repository's webhook file already contains several of those safeguards, including error handling, amount comparison, escaping and conditional status updates. The unresolved question is whether that code is what production deploys. This is a source-of-truth/release-integrity opportunity, not a confirmed missing-code bug.
 
-**Commercial fit:** The current official Tico website says “Coming soon.” I could not verify a current public price or paying customer base in this run. The commercial model is therefore unqualified, despite the issue describing an authenticated production check.
+**Commercial fit:** The official store is live, sells one-of-one vintage and match-worn football shirts, lists Mollie at checkout, and reports 1,500+ Instagram followers and six fairs attended. The site shows product price filters up to €350+.
 
 **Evidence / links**
-- Issue: https://github.com/ticoteam/tico/issues/3022
-- Matching PR: https://github.com/ticoteam/tico/pull/3023
-- Current official site: https://tico.dev/
-- Setup / hosting flow: https://tico.dev/setup
-- Product README: https://github.com/ticoteam/tico/blob/main/docs/README.md
+- Issue: https://github.com/yessefr/shirtsociete-web/issues/85
+- Current webhook source: https://github.com/yessefr/shirtsociete-web/blob/main/netlify/functions/mollie-webhook.js
+- Official store: https://shirtsociete.com/
 
-**Stack evidenced:** The README describes a self-hosted team application with a small server and separate runner. The issue concerns billing/plan-lock UI and asset loading. This is not a PostgreSQL opportunity.
+**Stack evidenced:** Netlify Functions, Mollie checkout/webhooks and the current code repository. The live site confirms Mollie as a checkout method. Do not assume the separate production repository uses the same code.
 
-**Likely decision-maker:** Founder / product engineering owner. A named buyer and current commercial owner were not independently confirmed.
+**Likely decision-maker:** Owner / merchant, Yesse, as identified in the issue. This is a small business rather than a SaaS company.
 
-**Tailored opening angle:** After PR #3023 lands, offer a failure-state regression sprint covering asset-load failures, stale cloud state, actual locked/frozen states and recovery actions that never unlock access on a failed check.
+**Tailored opening angle:** A deployment-source reconciliation sprint: compare the deployed Shirtsociete2 function with the hardened public function, move to one approved source of truth, then run Mollie sandbox tests for retries, amount mismatch, duplicate delivery and safe email rendering.
 
-**Next action:** Monitor PR #3023 through merge and release. Requalify the business only if the company publishes a live paid offer or confirms an active customer base.
+**Next action:** Establish which repository Netlify actually deploys and compare the deployed function before proposing code changes.
 
 ---
 
@@ -139,29 +137,6 @@ Research objective: identify founder-led SaaS, digital-product, membership and a
 
 ---
 
-## 6. Shirt Société — 7.5/10
-
-**Observed pain:** Open issue #85 asks for four Mollie webhook hardening checks: return 500 on transient errors so Mollie retries, escape customer fields in email HTML, compare the provider amount with the order total, and use a conditional pending-to-paid update to prevent duplicate processing. The issue says Netlify currently deploys from a different repository, Shirtsociete2, and that approval from Yesse is needed before changing the deployment source.
-
-**Important code-state caveat:** The current public repository's webhook file already contains several of those safeguards, including error handling, amount comparison, escaping and conditional status updates. The unresolved question is whether that code is what production deploys. This is a source-of-truth/release-integrity opportunity, not a confirmed missing-code bug.
-
-**Commercial fit:** The official store is live, sells one-of-one vintage and match-worn football shirts, lists Mollie at checkout, and reports 1,500+ Instagram followers and six fairs attended. The site shows product price filters up to €350+.
-
-**Evidence / links**
-- Issue: https://github.com/yessefr/shirtsociete-web/issues/85
-- Current webhook source: https://github.com/yessefr/shirtsociete-web/blob/main/netlify/functions/mollie-webhook.js
-- Official store: https://shirtsociete.com/
-
-**Stack evidenced:** Netlify Functions, Mollie checkout/webhooks and the current code repository. The live site confirms Mollie as a checkout method. Do not assume the separate production repository uses the same code.
-
-**Likely decision-maker:** Owner / merchant, Yesse, as identified in the issue. This is a small business rather than a SaaS company.
-
-**Tailored opening angle:** A deployment-source reconciliation sprint: compare the deployed Shirtsociete2 function with the hardened public function, move to one approved source of truth, then run Mollie sandbox tests for retries, amount mismatch, duplicate delivery and safe email rendering.
-
-**Next action:** Establish which repository Netlify actually deploys and compare the deployed function before proposing code changes.
-
----
-
 ## 7. Pay Me Back — 7.3/10
 
 **Observed pain / build requirement:** Open issue #228 specifies a new settlement flow: release the original £1 card hold, save the lead's card with consent, charge the actual guest round-ups off-session at settlement, and handle authentication-required declines with an on-session confirmation link. It requires idempotency per bill/session and a daily sweep that releases holds before expiry.
@@ -180,6 +155,31 @@ Research objective: identify founder-led SaaS, digital-product, membership and a
 **Tailored opening angle:** A bounded off-session settlement sprint covering SetupIntent/PaymentMethod setup, consent, release of the original hold, round-up charge, per-session idempotency, authentication-required recovery and reconciliation records.
 
 **Next action:** Confirm Stripe live mode is enabled and the owner has approved the off-session charge policy before scoping implementation.
+
+---
+
+## 4. Tico — 7.2/10
+
+**Observed pain:** Open issue #3022 reports that when a stylesheet or script fails to load, the page can show “Out of credit” and a plan-lock notice even though authenticated production checks showed positive credit and access=open. Blocking assets in Chromium and WebKit reproduces the misleading UI. This is a billing-state presentation/access-trust problem, not evidence of a failed payment or incorrect entitlement record.
+
+**Current work:** Matching PR #3023 is already open and addresses the loading-recovery state and hiding unconfirmed payment notices. Do not pitch the same fix as untouched work.
+
+**Commercial fit:** The current official Tico website says “Coming soon.” I could not verify a current public price or paying customer base in this run. The commercial model is therefore unqualified, despite the issue describing an authenticated production check.
+
+**Evidence / links**
+- Issue: https://github.com/ticoteam/tico/issues/3022
+- Matching PR: https://github.com/ticoteam/tico/pull/3023
+- Current official site: https://tico.dev/
+- Setup / hosting flow: https://tico.dev/setup
+- Product README: https://github.com/ticoteam/tico/blob/main/docs/README.md
+
+**Stack evidenced:** The README describes a self-hosted team application with a small server and separate runner. The issue concerns billing/plan-lock UI and asset loading. This is not a PostgreSQL opportunity.
+
+**Likely decision-maker:** Founder / product engineering owner. A named buyer and current commercial owner were not independently confirmed.
+
+**Tailored opening angle:** After PR #3023 lands, offer a failure-state regression sprint covering asset-load failures, stale cloud state, actual locked/frozen states and recovery actions that never unlock access on a failed check.
+
+**Next action:** Monitor PR #3023 through merge and release. Requalify the business only if the company publishes a live paid offer or confirms an active customer base.
 
 ---
 
