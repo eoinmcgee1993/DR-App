@@ -91,28 +91,28 @@ Research objective: identify founder-led SaaS, digital-product, membership and a
 
 ---
 
-## 4. Tico — 7.9/10
+## 4. Tico — 7.2/10
 
 **Observed pain:** Open issue #3022 reports that when a stylesheet or script fails to load, the page can show “Out of credit” and a plan-lock notice even though authenticated production checks showed positive credit and access=open. Blocking assets in Chromium and WebKit reproduces the misleading UI. This is a billing-state presentation/access-trust problem, not evidence of a failed payment or incorrect entitlement record.
 
 **Current work:** Matching PR #3023 is already open and addresses the loading-recovery state and hiding unconfirmed payment notices. Do not pitch the same fix as untouched work.
 
-**Commercial fit:** Tico sells hosted infrastructure from $2/day, documents a $20/month Starter hosting plan, and lists fully managed service from $10,000/month. The source-available product is free to self-host, so the paid opportunity is hosting/managed service rather than a paid app licence.
+**Commercial fit:** The current official Tico website says “Coming soon.” I could not verify a current public price or paying customer base in this run. The commercial model is therefore unqualified, despite the issue describing an authenticated production check.
 
 **Evidence / links**
 - Issue: https://github.com/ticoteam/tico/issues/3022
 - Matching PR: https://github.com/ticoteam/tico/pull/3023
-- Pricing: https://tico.dev/pricing
-- Hosting: https://tico.dev/products/hosting
-- Product: https://tico.dev/
+- Current official site: https://tico.dev/
+- Setup / hosting flow: https://tico.dev/setup
+- Product README: https://github.com/ticoteam/tico/blob/main/docs/README.md
 
-**Stack evidenced:** The README describes a self-hosted team application with a small server and SQLite data store, plus a separate runner. The issue concerns billing/plan-lock UI and asset loading. This is not a PostgreSQL opportunity.
+**Stack evidenced:** The README describes a self-hosted team application with a small server and separate runner. The issue concerns billing/plan-lock UI and asset loading. This is not a PostgreSQL opportunity.
 
-**Likely decision-maker:** Founder / product engineering owner. Public pricing and product contact are available, but a named technical buyer was not independently confirmed.
+**Likely decision-maker:** Founder / product engineering owner. A named buyer and current commercial owner were not independently confirmed.
 
 **Tailored opening angle:** After PR #3023 lands, offer a failure-state regression sprint covering asset-load failures, stale cloud state, actual locked/frozen states and recovery actions that never unlock access on a failed check.
 
-**Next action:** Monitor PR #3023 through merge and release; requalify only if the production failure matrix still has a gap.
+**Next action:** Monitor PR #3023 through merge and release. Requalify the business only if the company publishes a live paid offer or confirms an active customer base.
 
 ---
 
