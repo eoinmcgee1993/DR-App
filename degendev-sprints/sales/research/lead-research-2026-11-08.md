@@ -16,10 +16,10 @@ Research objective: identify founder-led SaaS, digital-product, membership and a
 | 1 | fazer.ai | 9.5 | Active | PostgreSQL restart resilience and pool recovery |
 | 2 | Garcar Enterprise | 8.7 | Active, early commercial stage | Stripe checkout-to-download fulfillment |
 | 3 | HCB / Hack Club | 8.1 | Conditional | Stripe Tap to Pay payment-intent reconciliation |
-| 4 | Tico | 7.9 | Monitor, matching PR open | Accurate billing/access state during failed asset loads |
+| 4 | Shirt Société | 7.5 | Conditional | Align production deployment with hardened Mollie webhook code |
 | 5 | ReachKit | 7.5 | Monitor, matching PR open; pre-revenue | Keep Inngest/Stripe machine routes off page middleware |
-| 6 | Shirt Société | 7.5 | Conditional | Align production deployment with hardened Mollie webhook code |
-| 7 | Pay Me Back | 7.3 | Early-stage build | Saved-card off-session charge and settlement idempotency |
+| 6 | Pay Me Back | 7.3 | Early-stage build | Saved-card off-session charge and settlement idempotency |
+| 7 | Tico | 7.2 | Monitor, matching PR open; commercial model unverified | Accurate billing/access state during failed asset loads |
 | 8 | FocusBro | 7.0 | Low-priority qualification | Revoke Pro text eligibility after refunds without page visits |
 | 9 | Startline | 6.8 | Pre-launch | Stripe Connect refund validation before release |
 | 10 | ApexHunt AI (GitHub project) | 6.6 | Early-stage, identity/budget unverified | RevenueCat consumable-refund credit reversal |
